@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse</title>
+	<style>
+	.move{
+	    border:1px solid red;
+        width:40%;
+		height:80vh;
+	}
+	
+	<!-- .key{ -->
+	   <!-- width:2rem; -->
+	   <!-- height:2rem; -->
+	   <!-- border:1px solid black; -->
+	   <!-- display:flex; -->
+	   <!-- align-items:center; -->
+	   <!-- justify-content:center; -->
+	   <!-- cursor:pointer; -->
+	<!-- } -->
+	<!-- .main{ -->
+	   <!-- display:flex; -->
+	   <!-- align-items:center; -->
+	   <!-- justify-content:space-between; -->
+	<!-- } -->
+	<!-- .border{ -->
+	   <!-- border:1px solid black; -->
+	   <!-- width:50rem; -->
+	   <!-- height:20rem; -->
+	<!-- } -->
+	</style>
+</head>
+<body>
+    <div class="move" id="over"  onMouseOver="myfunc()" onMouseOut="out()"  >
+	</div>
+	<!-- <div class="main"> -->
+	<!-- <div class='key' onClick="letter()" id="a">A</div> -->
+	<!-- <div class='key' onClick="letter()">B</div> -->
+	<!-- <div class='key' onClick="letter()">C</div> -->
+	<!-- <div class='key' onClick="letter()">D</div> -->
+	<!-- <div class='key' onClick="letter()">E</div> -->
+	<!-- <div class='key' onClick="letter()">F</div> -->
+	<!-- <div class='key' onClick="letter()">G</div> -->
+	<!-- <div class='key' onClick="letter()">H</div> -->
+	<!-- <div class='key' onClick="letter()">I</div> -->
+	
+	<!-- <div id='visible' class='border'></div> -->
+	<!-- </div -->
+	
+	<script>
+	
+	
+	
+    
+         function myfunc(){
+		    let overEle=document.getElementById("over")
+			
+			setInterval(function (){
+			    let red=Math.trunc(Math.random()*256),
+				 green=Math.trunc(Math.random()*256),
+				  blue=Math.trunc(Math.random()*256);
+				  let colors="rgb("+red+","+green+","+blue+")";
+			    overEle.style.backgroundColor=colors;
+			},1000);
+		 }
+		 function out(){
+		    let overEle=document.getElementById("over");
+			overEle.style.backgroundColor="";
+		 }
+	
+		   <!-- function letter() { -->
+			   <!-- let para=document.getElementById("visible"); -->
+			   <!-- para.innerHTML="A"; -->
+		   <!-- } -->
+		
+	</script>
+</body>
+</html>
